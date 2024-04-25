@@ -1,0 +1,346 @@
+package br.com.andersonsilva.askeonbooks
+
+import android.graphics.drawable.shapes.Shape
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.MarqueeSpacing
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import br.com.andersonsilva.askeonbooks.ui.theme.AskeonBooksTheme
+import kotlinx.coroutines.launch
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            AskeonBooksTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    Home()
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun Home() {
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
+    var expanded by remember { mutableStateOf(false) }
+    ModalNavigationDrawer(
+        drawerState = drawerState,
+        drawerContent = {
+            ModalDrawerSheet(drawerContainerColor = Color(0xFF882500)) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Row(
+                        Modifier.padding(vertical = 36.dp).fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        Text("Gêneros Literários", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Ação")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Aventura")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Comédia")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Fantasia")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Ficção Científica")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Infantil")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Romance")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Sobrenatural")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Suspense")
+                        }
+                    }
+                    Card(
+                        Modifier.padding(
+                            vertical = 6.dp
+                        ).size(width = 340.dp, height = 40.dp).fillMaxWidth()
+                    ) {
+                        Row(
+                            Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("Terror")
+                        }
+                    }
+                }
+            }
+        },
+    )
+    {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color(0xFF882500)
+                    ),
+                    navigationIcon = {
+                        IconButton(onClick = {
+                            scope.launch {
+                                drawerState.apply {
+                                    if (isClosed) open() else close()
+                                }
+                            }
+                        }) {
+                            Icon(painterResource(R.drawable.ic_categorymenu), "Um ícone do menu", tint = Color.White)
+                        }
+                    },
+                    title = {
+                        Text("Catálogo de Livros", color = Color.White)
+                    },
+                    actions = {
+                        IconButton(onClick = { expanded = true }) {
+                            Icon(painterResource(R.drawable.ic_usermenu), "Um ícone de perfil do usuário", tint = Color.White)
+                        }
+                    }
+                )
+            }
+        ) { paddingValues ->
+            Column(
+                Modifier.fillMaxSize().padding(paddingValues),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Row(
+                    Modifier.padding(
+                        vertical = 40.dp,
+                        horizontal = 24.dp
+                    )
+                ) {
+                    TextFieldWithInputType()
+                }
+                Card(
+                    Modifier.padding(
+                        horizontal = 30.dp,
+                        vertical = 10.dp
+                    ).fillMaxWidth()
+                )
+                {
+                    Row {
+                        Box {
+                            Image(
+                                painterResource(R.drawable.ic_launcher_background),
+                                "Um ícone de três barras verticais"
+                            )
+                        }
+                        Column(
+                            Modifier.padding(
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("O Gato Preto");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Autor: Edgar Allan Poe");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Páginas: 160")
+                        }
+                    }
+                }
+                Card(
+                    Modifier.padding(
+                        horizontal = 30.dp,
+                        vertical = 10.dp
+                    ).fillMaxWidth()
+                ) {
+                    Row {
+                        Box {
+                            Image(
+                                painterResource(R.drawable.ic_launcher_background),
+                                "Um ícone de três barras verticais"
+                            )
+                        }
+                        Column(
+                            Modifier.padding(
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("It: A Coisa");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Autor: Edgar Allan Poe");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Páginas: 1103")
+                        }
+                    }
+                }
+                Card(
+                    Modifier.padding(
+                        horizontal = 30.dp,
+                        vertical = 10.dp
+                    ).fillMaxWidth()
+                ) {
+                    Row {
+                        Box {
+                            Image(
+                                painterResource(R.drawable.ic_launcher_background),
+                                "Um ícone de três barras verticais"
+                            )
+                        }
+                        Column(
+                            Modifier.padding(
+                                horizontal = 10.dp
+                            )
+                        ) {
+                            Text("As Crônicas de Nárnia");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Autor: C.S");
+                            Spacer(Modifier.height(14.dp))
+                            Text("Páginas: 752")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun TextFieldWithInputType() {
+    var text by remember { mutableStateOf(TextFieldValue("")) }
+    TextField(
+        modifier = Modifier.fillMaxWidth(),
+        value = text,
+        label = { Text(text = "Procuro um livro", fontWeight = FontWeight.Bold, fontSize = 20.sp) },
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
+        onValueChange = { it ->
+            text = it
+        },
+        singleLine = true
+    )
+}
