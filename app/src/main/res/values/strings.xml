@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Pokedex</string>
+    <string name="login_field_password">Password</string>
+    <string name="app_name" translatable="false">AskeonBooks</string>
+    <string name="login_field_email">E-mail</string>
+    <string name="login_button_enter">Enter</string>
+    <string name="login_text_first_option">I forgot my password</string>
+    <string name="login_text_second_option">I don\'t have my account? To create</string>
+    <string name="placeholder_email">Type your e-mail</string>
+    <string name="placeholder_password">Type your password</string>
+    <string name="placeholder_username">Type your username</string>
+    <string name="login_field_username">Username</string>
+    <string name="home_add_message">Add new book</string>
 </resources>

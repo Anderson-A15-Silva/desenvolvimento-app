@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_field_password">Contraseña</string>
+    <string name="login_field_email">Correo electrónico</string>
+    <string name="login_button_enter">Ingressar</string>
+    <string name="login_text_first_option">Olvide mi contraseña</string>
+    <string name="login_text_second_option">¿No tengo mi cuenta? Crear</string>
+    <string name="placeholder_email">Escribe tu correo electrónico</string>
+    <string name="placeholder_password">Escribe tu contraseña</string>
+    <string name="placeholder_username">Ingrese su nombre de usuario</string>
+    <string name="login_field_username">Nombre de usuario</string>
+    <string name="home_add_message">Adicione nuevo libro</string>
+</resources>
