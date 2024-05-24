@@ -7,13 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import br.com.andersonsilva.askeonbooks.screens.LoginScreen
 import br.com.andersonsilva.askeonbooks.ui.theme.AskeonBooksTheme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.composable
-import br.com.andersonsilva.askeonbooks.screens.AccountScreen
-import br.com.andersonsilva.askeonbooks.screens.HomeScreen
+import br.com.andersonsilva.askeonbooks.screens.*
 
 
 class MainActivity : ComponentActivity() {
@@ -36,6 +34,12 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("home_screen"){
                             HomeScreen(navController)
+                        }
+                        composable("recover_password_screen"){
+                            RecoverPasswordScreen(navController)
+                        }
+                        composable("add_book_screen"){
+                            AddBookScreen(navController)
                         }
                     }
                 }

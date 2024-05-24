@@ -10,4 +10,9 @@
     <string name="placeholder_username">Ingrese su nombre de usuario</string>
     <string name="login_field_username">Nombre de usuario</string>
     <string name="home_add_message">Adicione nuevo libro</string>
+    <string name="user_key_password">Clave de usuario</string>
+    <string name="placeholder_user_key">Introduce tu clave de usuario</string>
+    <string name="home_title_screen">Catalogo de libros</string>
+    <string name="home_user_icon_description">Un icono de perfil de usuario</string>
+    <string name="home_example_image_description">Una imagen de fondo verde</string>
 </resources>

@@ -10,4 +10,9 @@
     <string name="placeholder_username">Type your username</string>
     <string name="login_field_username">Username</string>
     <string name="home_add_message">Add new book</string>
+    <string name="user_key_password">User Key</string>
+    <string name="placeholder_user_key">Enter your user key</string>
+    <string name="home_title_screen">Book catalog</string>
+    <string name="home_user_icon_description">A user profile icon</string>
+    <string name="home_example_image_description">A green background image</string>
 </resources>

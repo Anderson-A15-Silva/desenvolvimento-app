@@ -18,11 +18,11 @@ import br.com.andersonsilva.askeonbooks.R
 import br.com.andersonsilva.askeonbooks.components.CustomTextField
 
 @Composable
-fun AccountScreen(navController: NavController){
+fun AccountScreen(navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var username by remember { mutableStateOf("") }
-    Column (
+    Column(
         Modifier.padding(
             vertical = 8.dp
         ),
@@ -64,15 +64,15 @@ fun AccountScreen(navController: NavController){
             )
         )
         Spacer(Modifier.height(10.dp))
-        Row (
+        Row(
             Modifier.padding(30.dp)
-        ){
+        ) {
             Button(
                 onClick = {
                     navController.navigate("login_screen")
                 },
                 Modifier.fillMaxWidth()
-            ){
+            ) {
                 Text("Criar")
             }
         }

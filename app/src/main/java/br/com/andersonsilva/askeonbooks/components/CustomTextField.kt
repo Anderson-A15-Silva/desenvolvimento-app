@@ -17,16 +17,16 @@ fun CustomTextField(
     keyboardOptions: KeyboardOptions = KeyboardOptions(),
     isPassword: Boolean = false,
     isOutlined: Boolean = true
-){
-    if (isOutlined){
-    OutlinedTextField(
-        placeholder = { Text(placeholder) },
-        label = { Text(label) },
-        value = value,
-        onValueChange = onChange,
-        keyboardOptions = keyboardOptions,
-        visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None
-    )
+) {
+    if (isOutlined) {
+        OutlinedTextField(
+            placeholder = { Text(placeholder) },
+            label = { Text(label) },
+            value = value,
+            onValueChange = onChange,
+            keyboardOptions = keyboardOptions,
+            visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None
+        )
     } else {
         TextField(
             placeholder = { Text(placeholder) },

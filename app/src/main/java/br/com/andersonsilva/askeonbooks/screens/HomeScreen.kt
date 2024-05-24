@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
@@ -24,6 +25,7 @@ fun HomeScreen(navController: NavController) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     var expanded by remember { mutableStateOf(false) }
+
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
@@ -200,18 +202,35 @@ fun HomeScreen(navController: NavController) {
                         }
                     },
                     title = {
-                        Text("Catálogo de Livros", color = Color.White)
+                        Text(stringResource(R.string.home_title_screen), color = Color.White)
                     },
                     actions = {
                         IconButton(
                             onClick = {
                                 navController.navigate("login_screen")
-                        }) {
-                            Icon(painterResource(R.drawable.ic_usermenu), "Um ícone de perfil do usuário", tint = Color.White)
+                            }) {
+                            Icon(
+                                painterResource(R.drawable.ic_usermenu),
+                                stringResource(R.string.home_user_icon_description),
+                                tint = Color.White
+                            )
                         }
                     }
                 )
             },
+            floatingActionButton = {
+                FloatingActionButton(
+                    onClick = {
+                        navController.navigate("add_book_screen")
+                    }
+                ) {
+                    Button(
+                        onClick = { navController.navigate("add_book_screen") }
+                    ) {
+                        Text("+")
+                    }
+                }
+            }
         ) { paddingValues ->
             Column(
                 Modifier.fillMaxSize().padding(paddingValues),
@@ -236,7 +255,7 @@ fun HomeScreen(navController: NavController) {
                         Box {
                             Image(
                                 painterResource(R.drawable.ic_launcher_background),
-                                "Um ícone de três barras verticais"
+                                stringResource(R.string.home_example_image_description)
                             )
                         }
                         Column(
@@ -262,7 +281,7 @@ fun HomeScreen(navController: NavController) {
                         Box {
                             Image(
                                 painterResource(R.drawable.ic_launcher_background),
-                                "Um ícone de três barras verticais"
+                                stringResource(R.string.home_example_image_description)
                             )
                         }
                         Column(
@@ -288,7 +307,7 @@ fun HomeScreen(navController: NavController) {
                         Box {
                             Image(
                                 painterResource(R.drawable.ic_launcher_background),
-                                "Um ícone de três barras verticais"
+                                stringResource(R.string.home_example_image_description)
                             )
                         }
                         Column(
