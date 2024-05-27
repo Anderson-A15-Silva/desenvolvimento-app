@@ -29,7 +29,7 @@ fun AccountScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Criar conta", fontSize = 55.sp, color = Color(0xFF882500))
+        Text(stringResource(R.string.account_title_screen), fontSize = 45.sp, color = Color(0xFF882500))
         Spacer(Modifier.height(8.dp))
         CustomTextField(
             label = stringResource(R.string.login_field_username),
@@ -73,7 +73,7 @@ fun AccountScreen(navController: NavController) {
                 },
                 Modifier.fillMaxWidth()
             ) {
-                Text("Criar")
+                Text(stringResource(R.string.account_button_create))
             }
         }
     }

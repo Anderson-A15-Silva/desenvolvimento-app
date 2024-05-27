@@ -37,7 +37,7 @@ fun HomeScreen(navController: NavController) {
                         Modifier.padding(vertical = 36.dp).fillMaxWidth(),
                         horizontalArrangement = Arrangement.Center
                     ) {
-                        Text("Gêneros Literários", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                        Text(stringResource(R.string.drawer_genres_title), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
                     }
                     Card(
                         Modifier.padding(
@@ -225,9 +225,10 @@ fun HomeScreen(navController: NavController) {
                     }
                 ) {
                     Button(
-                        onClick = { navController.navigate("add_book_screen") }
+                        onClick = { navController.navigate("add_book_screen") },
+                        Modifier.size(70.dp)
                     ) {
-                        Text("+")
+                        Text("+", fontSize = 40.sp)
                     }
                 }
             }
@@ -242,7 +243,7 @@ fun HomeScreen(navController: NavController) {
                         horizontal = 24.dp
                     )
                 ) {
-                    TextFieldWithInputType("Procuro um livro")
+                    TextFieldWithInputType(stringResource(R.string.home_input_search))
                 }
                 Card(
                     Modifier.padding(

@@ -15,4 +15,17 @@
     <string name="home_title_screen">Book catalog</string>
     <string name="home_user_icon_description">A user profile icon</string>
     <string name="home_example_image_description">A green background image</string>
+    <string name="account_button_create">Create</string>
+    <string name="account_title_screen">Create an account</string>
+    <string name="book_label_name">Name</string>
+    <string name="book_label_author">Author</string>
+    <string name="book_label_pages">Pages</string>
+    <string name="book_placeholder_author">Write the author\'s name</string>
+    <string name="book_placeholder_name">Write the name of the book</string>
+    <string name="book_placeholder_pages">Enter the number of pages</string>
+    <string name="book_button_add">Add</string>
+    <string name="home_input_search">Search for a book</string>
+    <string name="drawer_genres_title">Literary genres</string>
+    <string name="recover_button_confirm">Confirm</string>
+    <string name="login_title_screen">Login</string>
 </resources>

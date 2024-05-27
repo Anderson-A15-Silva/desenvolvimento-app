@@ -18,9 +18,9 @@ import br.com.andersonsilva.askeonbooks.components.CustomTextField
 
 @Composable
 fun AddBookScreen(navController: NavController){
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var username by remember { mutableStateOf("") }
+    var bookName by remember { mutableStateOf("") }
+    var bookAuthor by remember { mutableStateOf("") }
+    var bookPage by remember { mutableStateOf("") }
     Column(
         Modifier.padding(
             vertical = 8.dp
@@ -31,10 +31,10 @@ fun AddBookScreen(navController: NavController){
         Text(stringResource(R.string.home_add_message), fontSize = 20.sp, color = Color(0xFF882500))
         Spacer(Modifier.height(8.dp))
         CustomTextField(
-            label = "Nome",
-            placeholder = "Escreva o nome do livro",
-            value = username,
-            onChange = { value -> username = value },
+            label = stringResource(R.string.book_label_name),
+            placeholder = stringResource(R.string.book_placeholder_name),
+            value = bookName,
+            onChange = { value -> bookName = value },
             isPassword = false,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text
@@ -42,10 +42,10 @@ fun AddBookScreen(navController: NavController){
         )
         Spacer(Modifier.height(2.dp))
         CustomTextField(
-            label = "Autor",
-            placeholder = "Escreva o nome do autor",
-            value = email,
-            onChange = { value -> email = value },
+            label = stringResource(R.string.book_label_author),
+            placeholder = stringResource(R.string.book_placeholder_author),
+            value = bookAuthor,
+            onChange = { value -> bookAuthor = value },
             isPassword = false,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text
@@ -53,11 +53,11 @@ fun AddBookScreen(navController: NavController){
         )
         Spacer(Modifier.height(2.dp))
         CustomTextField(
-            label = "Páginas",
-            placeholder = "Escreva a quantidade de páginas",
-            value = password,
-            onChange = { value -> password = value },
-            isPassword = true,
+            label = stringResource(R.string.book_label_pages),
+            placeholder = stringResource(R.string.book_placeholder_pages),
+            value = bookPage,
+            onChange = { value -> bookPage = value },
+            isPassword = false,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             )
@@ -72,7 +72,7 @@ fun AddBookScreen(navController: NavController){
                 },
                 Modifier.fillMaxWidth()
             ) {
-                Text("Adicionar")
+                Text(stringResource(R.string.book_button_add))
             }
         }
     }

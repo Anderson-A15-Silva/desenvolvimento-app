@@ -15,4 +15,17 @@
     <string name="home_title_screen">Catálogo de livros</string>
     <string name="home_user_icon_description">Um ícone de usuário</string>
     <string name="home_example_image_description">Uma imagem de fundo verde</string>
+    <string name="account_button_create">Criar</string>
+    <string name="account_title_screen">Criar conta</string>
+    <string name="book_label_name">Nome</string>
+    <string name="book_label_author">Autor</string>
+    <string name="book_label_pages">Páginas</string>
+    <string name="book_placeholder_author">Escreva o nome do autor</string>
+    <string name="book_placeholder_name">Escreva o nome do livro</string>
+    <string name="book_placeholder_pages">Digite a quantidade de páginas</string>
+    <string name="book_button_add">Adicionar</string>
+    <string name="home_input_search">Procurar um livro</string>
+    <string name="drawer_genres_title">Gêneros literários</string>
+    <string name="recover_button_confirm">Confirmar</string>
+    <string name="login_title_screen">Conectar-se</string>
 </resources>

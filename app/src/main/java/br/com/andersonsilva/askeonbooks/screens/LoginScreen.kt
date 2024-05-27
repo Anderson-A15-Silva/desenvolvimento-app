@@ -30,7 +30,7 @@ fun LoginScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Login", fontSize = 75.sp, color = Color(0xFF882500))
+        Text(stringResource(R.string.login_title_screen), fontSize = 75.sp, color = Color(0xFF882500))
         Spacer(Modifier.height(8.dp))
         CustomTextField(
             label = stringResource(R.string.login_field_email),
@@ -58,13 +58,13 @@ fun LoginScreen(navController: NavController) {
             TextButton(
                 onClick = { navController.navigate("recover_password_screen") }
             ) {
-                Text("Esqueci minha senha")
+                Text(stringResource(R.string.login_text_first_option))
             }
-            Spacer(Modifier.width(20.dp))
+            Spacer(Modifier.width(12.dp))
             TextButton(
                 onClick = { navController.navigate("account_screen") }
             ) {
-                Text("Não possui conta? Criar")
+                Text(stringResource(R.string.login_text_second_option))
             }
         }
         Spacer(Modifier.height(10.dp))
@@ -77,7 +77,7 @@ fun LoginScreen(navController: NavController) {
                 },
                 Modifier.fillMaxWidth()
             ) {
-                Text("Entrar")
+                Text(stringResource(R.string.login_button_enter))
             }
         }
     }

@@ -17,7 +17,7 @@ import br.com.andersonsilva.askeonbooks.components.CustomTextField
 
 @Composable
 fun RecoverPasswordScreen(navController: NavController) {
-    var password by remember { mutableStateOf("") }
+    var userkey by remember { mutableStateOf("") }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -26,8 +26,8 @@ fun RecoverPasswordScreen(navController: NavController) {
         CustomTextField(
             label = stringResource(R.string.user_key_password),
             placeholder = stringResource(R.string.placeholder_user_key),
-            value = password,
-            onChange = { value -> password = value },
+            value = userkey,
+            onChange = { value -> userkey = value },
             isPassword = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Password
@@ -40,7 +40,7 @@ fun RecoverPasswordScreen(navController: NavController) {
                 .padding(horizontal = 45.dp)
                 .fillMaxWidth()
         ) {
-            Text("Confirmar")
+            Text(stringResource(R.string.recover_button_confirm))
         }
     }
 }
