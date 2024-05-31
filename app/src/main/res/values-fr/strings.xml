@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_field_password">Mot de passe</string>
+    <string name="login_field_email">E-mail</string>
+    <string name="login_button_enter">Entrer</string>
+    <string name="login_text_first_option">J\'ai oublié mon mot de passe</string>
+    <string name="login_text_second_option">Vous n\'avez pas de compte ? Créer</string>
+    <string name="placeholder_email">Tapez votre e-mail</string>
+    <string name="placeholder_password">Tapez votre mot de passe</string>
+    <string name="placeholder_username">Entrez votre nom d\'utilisateur</string>
+    <string name="login_field_username">Nom d\'utilisateur</string>
+    <string name="home_add_message">Ajouter un nouveau livre</string>
+    <string name="user_key_password">Clé utilisateur</string>
+    <string name="placeholder_user_key">Écrivez votre clé utilisateur</string>
+    <string name="home_title_screen">Catalogue de livres</string>
+    <string name="home_user_icon_description">Une icône d\'utilisateur</string>
+    <string name="home_example_image_description">Une image de fond vert</string>
+    <string name="account_button_create">Créer</string>
+    <string name="account_title_screen">Créer un compte</string>
+    <string name="book_label_name">Nom</string>
+    <string name="book_label_author">Auteur</string>
+    <string name="book_label_pages">Pages</string>
+    <string name="book_placeholder_author">Écrivez le nom de l\'auteur</string>
+    <string name="book_placeholder_name">Écrivez le nom du livre</string>
+    <string name="book_placeholder_pages">Entrez le nombre de pages</string>
+    <string name="book_button_add">Ajouter</string>
+    <string name="home_input_search">Rechercher un livre</string>
+    <string name="drawer_genres_title">Genres littéraires</string>
+    <string name="recover_button_confirm">Confirmer</string>
+    <string name="login_title_screen">Se connecter</string>
+    <string name="message_register_success">Utilisateur enregistré avec succès</string>
+    <string name="message_success">Accueillir</string>
+    <string name="book_label_image">Image</string>
+    <string name="book_placeholder_image">Écrivez le lien de l\'adresse de l\'image</string>
+    <string name="book_label_genrer">Genre</string>
+    <string name="book_placeholder_genrer">Écrivez le genre principal du livre</string>
+    <string name="gender_action">Action</string>
+    <string name="gender_adventure">Aventure</string>
+    <string name="gender_comedy">Comédie</string>
+    <string name="gender_fantasy">Fantaisie</string>
+    <string name="gender_science_fiction">La science-fiction</string>
+    <string name="gender_infant">Enfants</string>
+    <string name="gender_romance">Romance</string>
+    <string name="gender_supernatural">Surnaturel</string>
+    <string name="gender_thriller">Thriller</string>
+    <string name="gender_horror">Horreur</string>
+</resources>

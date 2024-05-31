@@ -4,12 +4,12 @@
     <string name="login_field_email">Email</string>
     <string name="login_button_enter">Entrar</string>
     <string name="login_text_first_option">Esqueci minha senha</string>
-    <string name="login_text_second_option">Não possuo conta? Criar</string>
+    <string name="login_text_second_option">Não possui conta? Criar</string>
     <string name="placeholder_email">Digite seu email</string>
     <string name="placeholder_password">Digite sua senha</string>
     <string name="placeholder_username">Digite seu nome de usuário</string>
     <string name="login_field_username">Nome de usuário</string>
-    <string name="home_add_message">Adicione novo livro</string>
+    <string name="home_add_message">Adicionar novo livro</string>
     <string name="user_key_password">Chave do usuário</string>
     <string name="placeholder_user_key">Escreva sua chave de usuário</string>
     <string name="home_title_screen">Catálogo de livros</string>
