@@ -17,6 +17,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import br.com.andersonchoren.login.repository.UserRepository
 import br.com.andersonsilva.askeonbooks.R
 import br.com.andersonsilva.askeonbooks.components.CustomTextField
 import br.com.andersonsilva.askeonbooks.model.Book
@@ -119,10 +120,10 @@ fun AddBookScreen(navController: NavController){
                         genrer = bookGenrer
                     )
                     // val result: List<Book> = repository.findAll(book)
-                    val repository =  BookRepository(localContext)
+                    val repository = BookRepository(localContext)
                     val id = repository.insert(book)
-                    if(id > 0L){
-                        scope.launch{
+                    if (id > 0L) {
+                        scope.launch {
                             snackbarHostState.showSnackbar(
                                 message = successMessage,
                                 withDismissAction = true,
