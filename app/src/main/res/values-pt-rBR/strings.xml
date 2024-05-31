@@ -28,4 +28,10 @@
     <string name="drawer_genres_title">Gêneros literários</string>
     <string name="recover_button_confirm">Confirmar</string>
     <string name="login_title_screen">Conectar-se</string>
+    <string name="message_register_success">Usuário cadastrado com sucesso</string>
+    <string name="message_success">Bem-vindo</string>
+    <string name="book_label_image">Imagem</string>
+    <string name="book_placeholder_image">Escreva o link de endereço da imagem</string>
+    <string name="book_label_genrer">Gênero</string>
+    <string name="book_placeholder_genrer">Escreva o gênero principal do livro</string>
 </resources>

@@ -8,21 +8,31 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import br.com.andersonchoren.login.model.User
+import br.com.andersonchoren.login.repository.UserRepository
 import br.com.andersonsilva.askeonbooks.R
 import br.com.andersonsilva.askeonbooks.components.CustomTextField
 import br.com.andersonsilva.askeonbooks.screens.TextButton
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    val localContext = LocalContext.current
+    val welcomeMessage = stringResource(R.string.message_success)
+    val scope = rememberCoroutineScope()
+    val snackbarHostState = remember { SnackbarHostState() }
+
     Column(
         Modifier.padding(
             vertical = 8.dp
@@ -39,7 +49,8 @@ fun LoginScreen(navController: NavController) {
             onChange = { value -> email = value },
             isPassword = false,
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Email
+                keyboardType = KeyboardType.Email,
+                imeAction = ImeAction.Next
             )
         )
         Spacer(Modifier.height(2.dp))
@@ -50,7 +61,8 @@ fun LoginScreen(navController: NavController) {
             onChange = { value -> password = value },
             isPassword = true,
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Password
+                keyboardType = KeyboardType.Password,
+                imeAction = ImeAction.Done
             )
         )
         Spacer(Modifier.height(8.dp))
@@ -73,7 +85,21 @@ fun LoginScreen(navController: NavController) {
         ) {
             Button(
                 onClick = {
-                    navController.navigate("home_screen")
+                    val user = User(
+                        id = null,
+                        email = email,
+                        password = password,
+                    )
+                    val repository = UserRepository(localContext)
+                    val result: User? = repository.findOne(user)
+                    if (result != null) {
+                        scope.launch {
+                            snackbarHostState.showSnackbar(
+                                message = welcomeMessage
+                            )
+                        }
+                        navController.navigate("home_screen")
+                    }
                 },
                 Modifier.fillMaxWidth()
             ) {

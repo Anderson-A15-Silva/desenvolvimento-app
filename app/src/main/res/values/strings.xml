@@ -28,4 +28,10 @@
     <string name="drawer_genres_title">Literary genres</string>
     <string name="recover_button_confirm">Confirm</string>
     <string name="login_title_screen">Login</string>
+    <string name="message_register_success">User registered successfully</string>
+    <string name="message_success">Welcome</string>
+    <string name="book_label_image">Image</string>
+    <string name="book_placeholder_image">Write the image address link</string>
+    <string name="book_label_genrer">Genrer</string>
+    <string name="book_placeholder_genrer">Write the main genre of the book</string>
 </resources>

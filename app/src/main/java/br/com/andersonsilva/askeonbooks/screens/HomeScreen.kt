@@ -8,6 +8,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -17,7 +18,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.com.andersonsilva.askeonbooks.R
+import br.com.andersonsilva.askeonbooks.model.Book
+import br.com.andersonsilva.askeonbooks.repository.BookRepository
 import kotlinx.coroutines.launch
+import androidx.compose.material3.SnackbarHostState as SnackbarHostState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,6 +29,7 @@ fun HomeScreen(navController: NavController) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     var expanded by remember { mutableStateOf(false) }
+    val localContext = LocalContext.current
 
     ModalNavigationDrawer(
         drawerState = drawerState,
@@ -244,85 +249,6 @@ fun HomeScreen(navController: NavController) {
                     )
                 ) {
                     TextFieldWithInputType(stringResource(R.string.home_input_search))
-                }
-                Card(
-                    Modifier.padding(
-                        horizontal = 30.dp,
-                        vertical = 10.dp
-                    ).fillMaxWidth()
-                )
-                {
-                    Row {
-                        Box {
-                            Image(
-                                painterResource(R.drawable.ic_launcher_background),
-                                stringResource(R.string.home_example_image_description)
-                            )
-                        }
-                        Column(
-                            Modifier.padding(
-                                horizontal = 10.dp
-                            )
-                        ) {
-                            Text("O Gato Preto");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Autor: Edgar Allan Poe");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Páginas: 160")
-                        }
-                    }
-                }
-                Card(
-                    Modifier.padding(
-                        horizontal = 30.dp,
-                        vertical = 10.dp
-                    ).fillMaxWidth()
-                ) {
-                    Row {
-                        Box {
-                            Image(
-                                painterResource(R.drawable.ic_launcher_background),
-                                stringResource(R.string.home_example_image_description)
-                            )
-                        }
-                        Column(
-                            Modifier.padding(
-                                horizontal = 10.dp
-                            )
-                        ) {
-                            Text("It: A Coisa");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Autor: Edgar Allan Poe");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Páginas: 1103")
-                        }
-                    }
-                }
-                Card(
-                    Modifier.padding(
-                        horizontal = 30.dp,
-                        vertical = 10.dp
-                    ).fillMaxWidth()
-                ) {
-                    Row {
-                        Box {
-                            Image(
-                                painterResource(R.drawable.ic_launcher_background),
-                                stringResource(R.string.home_example_image_description)
-                            )
-                        }
-                        Column(
-                            Modifier.padding(
-                                horizontal = 10.dp
-                            )
-                        ) {
-                            Text("As Crônicas de Nárnia");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Autor: C.S");
-                            Spacer(Modifier.height(14.dp))
-                            Text("Páginas: 752")
-                        }
-                    }
                 }
             }
         }
