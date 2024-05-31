@@ -43,6 +43,7 @@ fun AccountScreen(navController: NavController) {
     ) {
         Text(stringResource(R.string.account_title_screen), fontSize = 45.sp, color = Color(0xFF882500))
         Spacer(Modifier.height(8.dp))
+        /*
         CustomTextField(
             label = stringResource(R.string.login_field_username),
             placeholder = stringResource(R.string.placeholder_username),
@@ -55,6 +56,7 @@ fun AccountScreen(navController: NavController) {
             )
         )
         Spacer(Modifier.height(2.dp))
+        */
         CustomTextField(
             label = stringResource(R.string.login_field_email),
             placeholder = stringResource(R.string.placeholder_email),
