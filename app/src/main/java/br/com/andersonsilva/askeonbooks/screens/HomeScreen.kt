@@ -55,7 +55,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Ação")
+                            Text(stringResource(R.string.gender_action))
                         }
                     }
                     Card(
@@ -69,7 +69,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Aventura")
+                            Text(stringResource(R.string.gender_adventure))
                         }
                     }
                     Card(
@@ -83,7 +83,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Comédia")
+                            Text(stringResource(R.string.gender_comedy))
                         }
                     }
                     Card(
@@ -97,7 +97,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Fantasia")
+                            Text(stringResource(R.string.gender_fantasy))
                         }
                     }
                     Card(
@@ -111,7 +111,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Ficção Científica")
+                            Text(stringResource(R.string.gender_science_fiction))
                         }
                     }
                     Card(
@@ -125,7 +125,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Infantil")
+                            Text(stringResource(R.string.gender_infant))
                         }
                     }
                     Card(
@@ -139,7 +139,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Romance")
+                            Text(stringResource(R.string.gender_romance))
                         }
                     }
                     Card(
@@ -153,7 +153,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Sobrenatural")
+                            Text(stringResource(R.string.gender_supernatural))
                         }
                     }
                     Card(
@@ -167,7 +167,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Suspense")
+                            Text(stringResource(R.string.gender_thriller))
                         }
                     }
                     Card(
@@ -181,7 +181,7 @@ fun HomeScreen(navController: NavController) {
                                 horizontal = 10.dp
                             )
                         ) {
-                            Text("Terror")
+                            Text(stringResource(R.string.gender_horror))
                         }
                     }
                 }

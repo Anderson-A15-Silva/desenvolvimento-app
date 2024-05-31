@@ -34,4 +34,14 @@
     <string name="book_placeholder_image">Escreva o link de endereço da imagem</string>
     <string name="book_label_genrer">Gênero</string>
     <string name="book_placeholder_genrer">Escreva o gênero principal do livro</string>
+    <string name="gender_action">Ação</string>
+    <string name="gender_adventure">Aventura</string>
+    <string name="gender_comedy">Comédia</string>
+    <string name="gender_fantasy">Fantasia</string>
+    <string name="gender_science_fiction">Ficção Científica</string>
+    <string name="gender_infant">Infantil</string>
+    <string name="gender_romance">Romance</string>
+    <string name="gender_supernatural">Sobrenatural</string>
+    <string name="gender_thriller">Suspense</string>
+    <string name="gender_horror">Terror</string>
 </resources>
